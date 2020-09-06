@@ -1,3 +1,5 @@
+import { InvestmentsComponent } from './investments/investments.component';
+import { FinancesComponent } from './finances/finances.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { CheckinComponent } from './checkin/checkin.component';
 import { AuthGuard } from './auth.guard';
@@ -15,7 +17,9 @@ const routes: Routes = [
   {path: 'locate', component : CheckinComponent},
   {path: 'transactions', component: TransactionsComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginpageComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'investments', component: InvestmentsComponent},
+  {path: 'finances', component: FinancesComponent}
 ];
 
 @NgModule({

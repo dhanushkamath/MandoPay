@@ -22,6 +22,8 @@ import { OfferCardsComponent } from './offer-cards/offer-cards.component';
 import { CheckinComponent } from './checkin/checkin.component';
 import { TransferService } from './transfer-service.service';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { FinancesComponent } from './finances/finances.component';
+import { InvestmentsComponent } from './investments/investments.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     OfferCardsComponent,
     CheckinComponent,
     ChatbotComponent,
+    FinancesComponent,
+    InvestmentsComponent,
   ],
   imports: [
     BrowserModule,

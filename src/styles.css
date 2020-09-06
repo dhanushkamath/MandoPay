@@ -11,18 +11,6 @@
   min-height: 1000px;
 }
 
-.blur1{
-  background: url(src/assets/img/blur-1.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 1000px;
-}
-.blur2{
-  background: url(src/assets/img/blur-2.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 1000px;
-}
 
 
 @media screen and (max-width: 670px){

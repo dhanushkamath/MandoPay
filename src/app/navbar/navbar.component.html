@@ -9,8 +9,8 @@
                 <li><a href="#about" routerLink = "/" *ngIf="!authService.loggedIn()">About</a></li>
 
                 <li><a href="#"routerLink = "/transactions" *ngIf="authService.loggedIn()">Transactions</a></li>
-                <li><a href="#"routerLink = "/" *ngIf="authService.loggedIn()">Finances</a></li>
-                <li><a href="#"routerLink = "/" *ngIf="authService.loggedIn()">Investments</a></li>
+                <li><a href="#"routerLink = "/finances" *ngIf="authService.loggedIn()">Finances</a></li>
+                <li><a href="#"routerLink = "/investments" *ngIf="authService.loggedIn()">Investments</a></li>
                 <li><a href="#" routerLink = "/chatbot">Chat</a></li>
                 <li><a href="#" routerLink = "/locate">Locate</a></li>
                 <li><a *ngIf="authService.loggedIn()" (click)="authService.logoutUser()">Logout</a></li>
