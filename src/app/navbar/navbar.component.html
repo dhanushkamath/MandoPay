@@ -1,0 +1,22 @@
+<!-- navbar -->
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper blue-grey darken-4">
+            <div class="container">
+            <a href="" routerLink ="/"class="brand-logo white-text">MandoPay</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#" routerLink ="/login" *ngIf="!authService.loggedIn()">Login</a></li>
+                <li><a href="#contact" routerLink = "/" *ngIf="!authService.loggedIn()">Contact</a></li>
+                <li><a href="#about" routerLink = "/" *ngIf="!authService.loggedIn()">About</a></li>
+
+                <li><a href="#"routerLink = "/transactions" *ngIf="authService.loggedIn()">Transactions</a></li>
+                <li><a href="#"routerLink = "/" *ngIf="authService.loggedIn()">Finances</a></li>
+                <li><a href="#"routerLink = "/" *ngIf="authService.loggedIn()">Investments</a></li>
+                <li><a href="#" routerLink = "/chatbot">Chat</a></li>
+                <li><a href="#" routerLink = "/locate">Locate</a></li>
+                <li><a *ngIf="authService.loggedIn()" (click)="authService.logoutUser()">Logout</a></li>
+            </ul>
+
+         </div>
+
+    </nav>
+        </div>

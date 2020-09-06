@@ -1,0 +1,22 @@
+<div class="row scrollspy" id="banklogin">
+    <form class="col s12 l4 offset-l4" action="/" method = POST>
+        <div class="card login">
+            <div class="card-action teal">
+                Login
+            </div>
+            <div class="card-content">
+                <div class="form-field white-text">
+                    <label for="l-username">Username</label>
+                    <input type="text" class="black-text" [(ngModel)]="userData.email" id="l-username" name="uname">
+                </div>
+                <div class="form-field">
+                    <label for="l-password">Password</label>
+                    <input type="password" class="black-text" [(ngModel)]="userData.password" id="l-password" name="upwd">
+                </div>
+                <div class="form-field">
+                    <button class="btn-large teal" (click)="loginUser()">Login</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

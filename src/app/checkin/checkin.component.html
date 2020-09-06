@@ -1,0 +1,22 @@
+<div class="warm">
+  <div class="container">
+  <div class="row locator">
+    <div class="col s12 l6" *ngFor="let bank of banks; let i = index">
+      <div class="card blue-grey darken-4">
+        <div class="card-content white-text">
+            <div class="card-image">
+                <img src="../../assets/img/building-{{i}}.jpg">
+              </div>
+          <span class="card-title">{{bank.Name}}</span>
+          <p>{{bank.PostalAddress.BuildingNumber}}, {{bank.PostalAddress.StreetName}}, {{bank.PostalAddress.TownName}}, {{bank.PostalAddress.PostCode}}</p>
+        </div>
+        <div class="card-action" >
+          <a (click)="testMore(bank,i)">More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+

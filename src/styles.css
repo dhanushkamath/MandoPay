@@ -1,0 +1,55 @@
+.head{
+    background: url(src/assets/img/city2.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+.warm{
+  background: url(src/assets/img/warm-2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 1000px;
+}
+
+.blur1{
+  background: url(src/assets/img/blur-1.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 1000px;
+}
+.blur2{
+  background: url(src/assets/img/blur-2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 1000px;
+}
+
+
+@media screen and (max-width: 670px){
+    header.head{
+        min-height: 1000px;
+    }
+}
+.login{
+  margin-top: 10em;
+}
+.transactions{
+  padding-top: 10em;
+}
+
+.locator{
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+
+.tabs .indicator{
+background-color: white;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+background: transparent;
+}
+.section{
+padding-top: 4vw;
+padding-bottom: 4vw;
+}
