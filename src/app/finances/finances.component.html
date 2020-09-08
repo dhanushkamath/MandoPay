@@ -199,8 +199,8 @@
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-4-tablet">
                 <div class="mdc-card info-card info-card--success">
                   <div class="card-inner">
-                    <h5 class="card-title">Term Deposits</h5>
-                    <h5 class="font-weight-light pb-2 mb-1 border-bottom">$20,000.00</h5>
+                    <h5 class="card-title">All Deposits</h5>
+                    <h5 class="font-weight-light pb-2 mb-1 border-bottom">$24,500.00</h5>
                     <p class="tx-12 text-muted">6% growth</p>
                     <div class="card-icon-wrapper">
                       <i class="material-icons">dvr</i>
@@ -331,7 +331,7 @@
                   <div class="mdc-layout-grid__inner align-items-center">
                     <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-2-phone">
                       <div>
-                        <h5 class="font-weight-normal mt-2">Current Month</h5>
+                        <h5 class="font-weight-normal mt-2">Current monthly average</h5>
                         <h2 class="font-weight-normal mt-3 mb-0">$10000</h2>
                       </div>
                     </div>
@@ -353,115 +353,102 @@
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet">
                 <div class="mdc-card bg-info text-white">
                     <div class="d-flex justify-content-between">
-                      <h3 class="font-weight-normal">Traffic</h3>
-                      <i class="material-icons options-icon text-white">more_vert</i>
+                      <h3 class="font-weight-normal">Your Portfolio</h3>
                     </div>
                     <div class="mdc-layout-grid__inner align-items-center">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-2-phone">
                         <div>
-                          <h5 class="font-weight-normal mt-2">Customers 58.39k</h5>
-                          <h2 class="font-weight-normal mt-3 mb-0">636,757K</h2>
+                          <h5 class="font-weight-normal mt-2">Corpus</h5>
+                          <h2 class="font-weight-normal mt-3 mb-0">$40,000</h2>
                         </div>
                       </div>
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-2-phone">
-                        <canvas id="traffic-chart" height="80"></canvas>
+                        <div class="chart">
+                            <canvas baseChart width="350" height="350"
+                              [data]="pieChartData"
+                              [labels]="pieChartLabels"
+                              [chartType]="pieChartType"
+                              [options]="pieChartOptions"
+                              [plugins]="pieChartPlugins"
+                              [colors]="pieChartColors"
+                              [legend]="pieChartLegend">
+                            </canvas>
+                          </div>
                       </div>
                     </div>
                 </div>
               </div>
-              <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-8">
+              <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-7">
                 <div class="mdc-card">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="card-title mb-2 mb-sm-0">Revenue by location</h4>
-                    <div class="d-flex justtify-content-between align-items-center">
-                      <p class="d-none d-sm-block text-muted tx-12 mb-0 mr-2">Goal reached</p>
-                      <i class="material-icons options-icon">more_vert</i>
-                    </div>
-                  </div>
-                  <div class="d-block d-sm-flex justify-content-between align-items-center">
-                    <h6 class="card-sub-title mb-0">Sales performance revenue based by country</h6>
-                    <div class="mdc-tab-wrapper revenue-tab mdc-tab--secondary"> 
-                      <div class="mdc-tab-bar" role="tablist">
-                        <div class="mdc-tab-scroller">
-                          <div class="mdc-tab-scroller__scroll-area">
-                            <div class="mdc-tab-scroller__scroll-content">
-                              <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                <span class="mdc-tab__content">
-                                  <span class="mdc-tab__text-label">1W</span>
-                                </span>
-                                <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                              </button>
-                              <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                <span class="mdc-tab__content">
-                                  <span class="mdc-tab__text-label">1M</span>
-                                </span>
-                                <span class="mdc-tab-indicator mdc-tab-indicator">
-                                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                              </button>
-                              <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                <span class="mdc-tab__content">
-                                  <span class="mdc-tab__text-label">3M</span>
-                                </span>
-                                <span class="mdc-tab-indicator mdc-tab-indicator">
-                                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                              </button>
-                              <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                <span class="mdc-tab__content">
-                                  <span class="mdc-tab__text-label">1Y</span>
-                                </span>
-                                <span class="mdc-tab-indicator mdc-tab-indicator">
-                                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                              </button>
-                              <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                <span class="mdc-tab__content">
-                                  <span class="mdc-tab__text-label">ALL</span>
-                                </span>
-                                <span class="mdc-tab-indicator mdc-tab-indicator">
-                                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                </span>
-                                <span class="mdc-tab__ripple"></span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="content content--active">    
-                      </div>
-                      <div class="content">
-                      </div>
-                      <div class="content">    
-                      </div>
-                      <div class="content">
-                      </div>
-                      <div class="content">
-                      </div>
+                    <h4 class="card-title mb-2 mb-sm-0">Intelligent Insights & Recommendations</h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <p class="d-none d-sm-block text-muted tx-12 mb-0 mr-2">Personalized content curated with advanced AI algorithms</p>
                     </div>
                   </div>
                   <div class="chart-container mt-4">
-                    <canvas id="revenue-chart" height="260"></canvas>
+                    <div class="table-responsive">
+                        <table class="table dashboard-table">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <span class="flag-icon-container"><i class="flag-icon flag-icon-us mr-2"></i></span>Equity markets are displaying excellent recovery. Recommended to invest in Bluechip Mutual Funds.</td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i class="flag-icon flag-icon-ph mr-2"></i></span>Bumping up recurring deposits by 10% will help you achieve your <b>'Europe Trip'</b> goal sooner by 5 months.</td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i class="flag-icon flag-icon-gb mr-2"></i></span>Your average monthly balance in the last 4 months was <b>41.2%</b> lower than usual.</td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i class="flag-icon flag-icon-ca mr-2"></i></span>Your credit score decreased by 10 points last month. Ensure to pay credit card bill on time.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                   </div>
                 </div>
               </div>
-              <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet">
+              <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-5 mdc-layout-grid__cell--span-8-tablet">
                 <div class="mdc-card">
                   <div class="d-flex d-lg-block d-xl-flex justify-content-between">
                     <div>
-                      <h4 class="card-title">Order Statistics</h4>
-                      <h6 class="card-sub-title">Customers 58.39k</h6>
+                      <h4 class="card-title">Financial Goals</h4>
                     </div>
                     <div id="sales-legend" class="d-flex flex-wrap"></div>
                   </div>
                   <div class="chart-container mt-4">
-                    <canvas id="chart-sales" height="260"></canvas>
+                    <div class="table-responsive">
+                        <table class="table dashboard-table">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <span class="flag-icon-container"><i class="flag-icon flag-icon-us mr-2"></i></span><b>Goal</b></td>
+                              <td><b>Target</b></td>
+                              <td><b>Current</b></td>
+                              <td><b>Completion Time</b></td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i class="flag-icon flag-icon-ph mr-2"></i></span>New Smartphone</td>
+                              <td>$2,000</td>
+                              <td class=" font-weight-medium"> $1500 </td>
+                              <td>7 months</td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i class="flag-icon flag-icon-gb mr-2"></i></span>New Car</td>
+                              <td>$40000</td>
+                              <td class=" font-weight-medium"> $17800 </td>
+                              <td class=" font-weight-medium"> 3 years 4 months </td>
+                            </tr>
+                            <tr>
+                              <td> <span class="flag-icon-container"><i class="flag-icon flag-icon-ca mr-2"></i></span>Europe Trip</td>
+                              <td>$1500</td>
+                              <td class=" font-weight-medium"> $800 </td>
+                              <td class=" font-weight-medium"> 1 year 6 months </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -469,22 +456,6 @@
           </div>
         </main>
         <!-- partial:partials/_footer.html -->
-        <footer>
-          <div class="mdc-layout-grid">
-            <div class="mdc-layout-grid__inner">
-              <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                <span class="tx-14">Copyright © 2019 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
-              </div>
-              <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop d-flex justify-content-end">
-                <div class="d-flex align-items-center">
-                  <a href="">Documentation</a>
-                  <span class="vertical-divider"></span>
-                  <a href="">FAQ</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
         <!-- partial -->
       </div>
     </div>
