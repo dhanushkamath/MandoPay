@@ -23,7 +23,8 @@ import { CheckinComponent } from './checkin/checkin.component';
 import { TransferService } from './transfer-service.service';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { FinancesComponent } from './finances/finances.component';
-import { InvestmentsComponent } from './investments/investments.component';
+import { InvestmentsComponent } from './investments/investments.component'
+import { ChartsModule, ThemeService } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -43,12 +44,13 @@ import { InvestmentsComponent } from './investments/investments.component';
     InvestmentsComponent,
   ],
   imports: [
+    ChartsModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [AuthService, AuthGuard, SpeechRecognitionService,TransactionsService, CheckinService, TransferService,{
+  providers: [AuthService, ThemeService, AuthGuard, SpeechRecognitionService,TransactionsService, CheckinService, TransferService,{
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true
