@@ -1,4 +1,5 @@
 # MandoPay
+A voice controlled personal finances and investment management web application built using Angular and Materialize.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
 
